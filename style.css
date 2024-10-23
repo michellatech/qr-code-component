@@ -1,0 +1,78 @@
+/* This resets the default browser styles to give you more control over how margins and paddings are applied. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+
+}
+
+/*
+display: flex: This is used to center the card vertically and horizontally. 
+    Flexbox is great for centering elements, especially for layouts where you want elements perfectly aligned.
+justify-content: center and align-items: center: 
+    Together, these properties center the card within the viewport both horizontally and vertically.
+height: 100vh: The vh unit stands for "viewport height," meaning the body's height will be 100% of the visible screen.
+*/
+
+body {
+    background-color: #d6e2f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.qr-container {
+    margin: auto;
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.1);
+}
+
+.qr-container img{
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.content h1 {
+    font-size: 22px;
+        font-weight: 700;
+    color: #1f314f;
+    margin: 20px 0;
+}
+
+.content p {
+    font-size: 15px;
+    color: #7b879d; /* hsl(220, 15%, 55%) */
+    line-height: 1.5;
+
+}
+
+/* Add mobile optimizations */
+@media (max-width: 375px) {
+    body {
+        padding: 10px; /* Adjust padding to prevent overflow on very small screens */
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-content h1 {
+        font-size: 18px; /* Adjust text size for small screens */
+    }
+
+    .card-content p {
+        font-size: 14px; /* Adjust text size for readability */
+    }
+}
